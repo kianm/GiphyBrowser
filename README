@@ -1,0 +1,35 @@
+
+Third-party library used: 
+ RxSwift
+ RxCocoa
+
+for testing:
+Nimble
+Quick
+RxBlocking
+RxTest
+
+The CountDownLatch is also used for testing, and it's from Uber, replacing their Atomic Int with my own version.
+-By no means test coverage is complete, but the structure and some mocks are there. 
+The GiphyClient module has a few important tests.
+
+Features:
+Using RxSwift Subjects to return values from iOS Operations,
+Operations are used to execute a function in a background thread through an OperationQueue with the capability to  cancel the Operations that are not needed anymore.
+This is used when the GIF images are being downloaded, and at the same time the user scrolls down quickly. 
+In this case downloading the GIF iamges for the cells that go out of view are cancelled, so the newly visible cells are prioritized.
+This is tested (KMOperation Module).
+
+The app is built, keeping in mind proper abstraction layers and reusability. Of course there's room for improvement.
+
+-A fixed frame rate of 60 fps is set for all GIFs, using the "animationDuration" property of UIImageView.
+
+
+- API_KEY and API_URL are provided in the app Info.plist
+
+-  default frame rate for GIF, which could be more or less than the intended frame rate.
+
+
+
+
+

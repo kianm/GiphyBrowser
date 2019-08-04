@@ -1,0 +1,6 @@
+excluded:
+  - Pods
+  - GiphyClientTests
+  - GiphyBrowserTests
+opt_in_rules: 
+  - trailing_newline
