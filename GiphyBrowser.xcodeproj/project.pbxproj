@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C957FC5927734F1EE1CD9F5 /* Pods_GiphyClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E6E0C385E9BC5F118B4B8E /* Pods_GiphyClientTests.framework */; };
 		78C5C399AA47E5227A499330 /* Pods_GiphyClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287028BB7BB0825DF4F9C3D /* Pods_GiphyClient.framework */; };
+		7EA61427889C7C60986FCCB1 /* Pods_GiphyBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB305B193019122D89D14D /* Pods_GiphyBrowser.framework */; };
 		89354499A58B3620CD81FB26 /* Pods_GiphyBrowserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C133AA00DAD031DD31586 /* Pods_GiphyBrowserTests.framework */; };
 		8D46824E22AB9F9000B0C7EB /* GiphyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46824D22AB9F8F00B0C7EB /* GiphyClient.swift */; };
 		8D46825022ABBB6700B0C7EB /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46824F22ABBB6700B0C7EB /* UIManager.swift */; };
@@ -232,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D46A7F822A975B8005D8704 /* GiphyClient.framework in Frameworks */,
+				7EA61427889C7C60986FCCB1 /* Pods_GiphyBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
