@@ -66,6 +66,8 @@
 		8D874C5F22F6D216005B57BA /* ZoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D874C5E22F6D216005B57BA /* ZoomViewModel.swift */; };
 		8D874C6122F6DBAA005B57BA /* UIImageView+UIImageSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D874C6022F6DBAA005B57BA /* UIImageView+UIImageSequence.swift */; };
 		8DD1974622B63A45007018DF /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1974522B63A45007018DF /* AppInteractor.swift */; };
+		8DE3FF3F22F8924500EB18CE /* KMOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D569C4922BE3AA300CD9ACE /* KMOperation.framework */; };
+		8DE3FF4022F8924500EB18CE /* KMOperation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D569C4922BE3AA300CD9ACE /* KMOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F96725298FACFDE39FDECFF /* Pods_KMOperationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9F71578BEE57091B4A2E27 /* Pods_KMOperationTests.framework */; };
 		CA642FA7516EBB5D62A6B3C0 /* Pods_KMOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AD794B28C57BF4177F466 /* Pods_KMOperation.framework */; };
 /* End PBXBuildFile section */
@@ -113,6 +115,13 @@
 			remoteGlobalIDString = 8D569C4822BE3AA300CD9ACE;
 			remoteInfo = KMOperation;
 		};
+		8DE3FF4122F8924500EB18CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D46A7AA22A95138005D8704 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D569C4822BE3AA300CD9ACE;
+			remoteInfo = KMOperation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +131,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8DE3FF4022F8924500EB18CE /* KMOperation.framework in Embed Frameworks */,
 				8D46A7F922A975B8005D8704 /* GiphyClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -233,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D46A7F822A975B8005D8704 /* GiphyClient.framework in Frameworks */,
+				8DE3FF3F22F8924500EB18CE /* KMOperation.framework in Frameworks */,
 				7EA61427889C7C60986FCCB1 /* Pods_GiphyBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +569,7 @@
 			);
 			dependencies = (
 				8D46A7F722A975B8005D8704 /* PBXTargetDependency */,
+				8DE3FF4222F8924500EB18CE /* PBXTargetDependency */,
 			);
 			name = GiphyBrowser;
 			productName = GiphyBrowser;
@@ -1094,6 +1106,11 @@
 			target = 8D569C4822BE3AA300CD9ACE /* KMOperation */;
 			targetProxy = 8DE3FF3D22F8844600EB18CE /* PBXContainerItemProxy */;
 		};
+		8DE3FF4222F8924500EB18CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D569C4822BE3AA300CD9ACE /* KMOperation */;
+			targetProxy = 8DE3FF4122F8924500EB18CE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1316,10 +1333,10 @@
 			baseConfigurationReference = EE62AD29A303DC85B80F3C64 /* Pods-GiphyClient.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R8369JD6Q4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1333,6 +1350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1345,11 +1363,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0164C8BD021B5C4499CD301 /* Pods-GiphyClient.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R8369JD6Q4;
+				DEVELOPMENT_TEAM = Z2T3A756FL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1363,6 +1381,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1419,10 +1438,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R8369JD6Q4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1436,6 +1455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.KMOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1451,11 +1471,11 @@
 			baseConfigurationReference = 221985CFF75D7E5BFE65FD0D /* Pods-KMOperation.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = R8369JD6Q4;
+				DEVELOPMENT_TEAM = Z2T3A756FL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1469,6 +1489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.KMOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
