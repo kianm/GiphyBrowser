@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C957FC5927734F1EE1CD9F5 /* Pods_GiphyClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E6E0C385E9BC5F118B4B8E /* Pods_GiphyClientTests.framework */; };
-		2E3AF65443088BB7564DD5D7 /* Pods_GiphyBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB305B193019122D89D14D /* Pods_GiphyBrowser.framework */; };
 		78C5C399AA47E5227A499330 /* Pods_GiphyClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287028BB7BB0825DF4F9C3D /* Pods_GiphyClient.framework */; };
 		89354499A58B3620CD81FB26 /* Pods_GiphyBrowserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C133AA00DAD031DD31586 /* Pods_GiphyBrowserTests.framework */; };
 		8D46824E22AB9F9000B0C7EB /* GiphyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D46824D22AB9F8F00B0C7EB /* GiphyClient.swift */; };
@@ -61,8 +60,6 @@
 		8D5E986922BFD37800960563 /* CountDownLatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5E986822BFD37800960563 /* CountDownLatchTests.swift */; };
 		8D5E986B22BFD9A300960563 /* KMOperationSubjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5E986A22BFD9A300960563 /* KMOperationSubjectable.swift */; };
 		8D5E986D22BFDD3C00960563 /* KMOperationSubjectableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5E986C22BFDD3C00960563 /* KMOperationSubjectableTests.swift */; };
-		8D5E987022BFFCFD00960563 /* KMOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D569C4922BE3AA300CD9ACE /* KMOperation.framework */; };
-		8D5E987122BFFCFD00960563 /* KMOperation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D569C4922BE3AA300CD9ACE /* KMOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D7AC23622B652A500364B9D /* Injectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AC23522B652A500364B9D /* Injectables.swift */; };
 		8D7AC23822B6545E00364B9D /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AC23722B6545E00364B9D /* ZoomViewController.swift */; };
 		8D874C5F22F6D216005B57BA /* ZoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D874C5E22F6D216005B57BA /* ZoomViewModel.swift */; };
@@ -108,7 +105,7 @@
 			remoteGlobalIDString = 8D569C4822BE3AA300CD9ACE;
 			remoteInfo = KMOperation;
 		};
-		8D5E987222BFFCFD00960563 /* PBXContainerItemProxy */ = {
+		8DE3FF3D22F8844600EB18CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8D46A7AA22A95138005D8704 /* Project object */;
 			proxyType = 1;
@@ -124,7 +121,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8D5E987122BFFCFD00960563 /* KMOperation.framework in Embed Frameworks */,
 				8D46A7F922A975B8005D8704 /* GiphyClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -236,8 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D46A7F822A975B8005D8704 /* GiphyClient.framework in Frameworks */,
-				8D5E987022BFFCFD00960563 /* KMOperation.framework in Frameworks */,
-				2E3AF65443088BB7564DD5D7 /* Pods_GiphyBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +556,6 @@
 			);
 			dependencies = (
 				8D46A7F722A975B8005D8704 /* PBXTargetDependency */,
-				8D5E987322BFFCFD00960563 /* PBXTargetDependency */,
 			);
 			name = GiphyBrowser;
 			productName = GiphyBrowser;
@@ -602,6 +595,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8DE3FF3E22F8844600EB18CE /* PBXTargetDependency */,
 			);
 			name = GiphyClient;
 			productName = GiphyClient;
@@ -1093,10 +1087,10 @@
 			target = 8D569C4822BE3AA300CD9ACE /* KMOperation */;
 			targetProxy = 8D569C5322BE3AA300CD9ACE /* PBXContainerItemProxy */;
 		};
-		8D5E987322BFFCFD00960563 /* PBXTargetDependency */ = {
+		8DE3FF3E22F8844600EB18CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D569C4822BE3AA300CD9ACE /* KMOperation */;
-			targetProxy = 8D5E987222BFFCFD00960563 /* PBXContainerItemProxy */;
+			targetProxy = 8DE3FF3D22F8844600EB18CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1242,7 +1236,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.GiphyBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1263,7 +1257,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.GiphyBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1332,7 +1326,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.GiphyClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1362,7 +1356,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.GiphyClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.GiphyClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1435,7 +1429,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.KMOperation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.KMOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1468,7 +1462,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kian.KMOperation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainylantern.KMOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
