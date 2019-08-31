@@ -78,22 +78,13 @@ public class GiphyClient: GiphyClientType, GCCacheInjected, ExecutorInjected {
     public func retrieveImageSequence(path: String) -> Observable<UIImageSequence> {
 
         guard let url = URL(string: path) else {
-            return Observable.just(placeHolderImageData.imageSequence())
-        }
-
-        let observableCachedImage = gcCache.getImageSequence(key: url.path)
-            .map {[unowned self] (imageSequence: UIImageSequence?) -> UIImageSequence in
-                if let sequence = imageSequence {
-                    return sequence
-                } else {
-                    return self.placeHolderImageData.imageSequence()
-                }
+            return Observable.just(placeHolderImageSequence)
         }
 
         let subject = ReplaySubject<UIImageSequence>.create(bufferSize: 1)
         let operationIndex = operationExecutor.enqueueFunction(getRequestSync, arg: url, subject: subject)
         operationIndexDict[path] = operationIndex
-        return Observable.concat(observableCachedImage.take(1), subject)
+        return subject
     }
 
     public func cancelImageRetrieve(path: String) {
@@ -107,9 +98,9 @@ public class GiphyClient: GiphyClientType, GCCacheInjected, ExecutorInjected {
         self?.requestImageSync(url) ?? UIImageSequence(images: [])
     }
 
-    private lazy var placeHolderImageData: Data = {
+    private lazy var placeHolderImageSequence: UIImageSequence = {
         let imageURL = Bundle(for: type(of: self)).url(forResource: "earth4", withExtension: "gif")!
-        return (try? Data(contentsOf: imageURL)) ?? Data()
+        return (try? Data(contentsOf: imageURL).imageSequence()) ?? Data().imageSequence()
     }()
 
     public func laodItem() -> GIF? {

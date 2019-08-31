@@ -16,7 +16,7 @@ class TrendingViewController: UIViewController {
     private lazy var collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     private var bound = false
     private var listDelegate = PublishSubject<PluggableListDelegate>()
-    private var numberPerRow = 7
+    private var numberPerRow = 3
     private lazy var layout: UICollectionViewFlowLayout = {
         return UICollectionViewFlowLayout()
     }()
