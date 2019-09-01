@@ -9,7 +9,7 @@
 import RxSwift
 import KMOperation
 
-public final class APIClient: APIType, NetworkingInjected {
+final class APIClient: APIType, NetworkingInjected {
 
     internal func getDataASync(_ url: URL) -> Observable<GCResult<Data>> {
         return networking.asyncDataTask(urlrequest: request(url))
